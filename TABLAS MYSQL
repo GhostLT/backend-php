@@ -1,0 +1,54 @@
+mysql> use cursos_online;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++-------------------------+
+| Tables_in_cursos_online |
++-------------------------+
+| capitulos               |
+| cursos                  |
+| usuarios                |
++-------------------------+
+3 rows in set (0.00 sec)
+
+
+mysql> SHOW COLUMNS FROM capitulos FROM cursos_online;
++-------------+-----------------+------+-----+---------+----------------+
+| Field       | Type            | Null | Key | Default | Extra          |
++-------------+-----------------+------+-----+---------+----------------+
+| id          | int(11)         | NO   | PRI | NULL    | auto_increment |
+| curso_id    | int(11)         | NO   |     | NULL    |                |
+| nombre      | varchar(30)     | NO   |     | NULL    |                |
+| posicion    | int(3) unsigned | NO   |     | NULL    |                |
+| visibilidad | tinyint(4)      | NO   |     | NULL    |                |
+| contenido   | text            | NO   |     | NULL    |                |
++-------------+-----------------+------+-----+---------+----------------+
+6 rows in set (0.00 sec)
+
+mysql> SHOW COLUMNS FROM cursos FROM cursos_online;
++-------------+-----------------+------+-----+---------+----------------+
+| Field       | Type            | Null | Key | Default | Extra          |
++-------------+-----------------+------+-----+---------+----------------+
+| id          | int(11)         | NO   | PRI | NULL    | auto_increment |
+| nombre      | varchar(30)     | NO   |     | NULL    |                |
+| posicion    | int(3) unsigned | NO   |     | NULL    |                |
+| visibilidad | tinyint(4)      | YES  |     | NULL    |                |
++-------------+-----------------+------+-----+---------+----------------+
+4 rows in  set (0.00 sec)
+
+mysql> SHOW COLUMNS FROM usuarios FROM cursos_online;
++----------+-------------+------+-----+---------+----------------+
+| Field    | Type        | Null | Key | Default | Extra          |
++----------+-------------+------+-----+---------+----------------+
+| id       | int(11)     | NO   | PRI | NULL    | auto_increment |
+| username | varchar(20) | NO   |     | NULL    |                |
+| password | varchar(40) | NO   |     | NULL    |                |
++----------+-------------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+mysql> 
+
+
+

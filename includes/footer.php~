@@ -1,0 +1,11 @@
+</div>
+<div id="pie">Todos los derechos reservados. 2015</div>
+    	
+</body>
+</html>
+<?php
+	if(isset($conexion))
+	{
+		mysql_close($conexion);
+	}
+?>
